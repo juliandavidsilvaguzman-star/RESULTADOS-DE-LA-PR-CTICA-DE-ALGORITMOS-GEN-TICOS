@@ -4,7 +4,7 @@
 
 Este repositorio contiene la implementación, experimentación y análisis comparativo de un **Algoritmo Genético Simple** enfocado en resolver un problema de optimización continuo bidimensional.
 
-## 📋 Estructura del Proyecto
+##  Estructura del Proyecto
 
 *   **Algoritmo Principal:** Uso del framework `geneticalgorithm2` en Python.
 *   **Función Objetivo:** Minimización de la función cuadrática:
@@ -17,7 +17,7 @@ Este repositorio contiene la implementación, experimentación y análisis compa
 
 ---
 
-## 🧪 Resumen de Experimentos Realizados
+##  Resumen de Experimentos Realizados
 
 Se diseñaron y ejecutaron de manera sistemática diferentes configuraciones variando los hiperparámetros clave:
 
@@ -31,7 +31,7 @@ Se diseñaron y ejecutaron de manera sistemática diferentes configuraciones var
 
 ---
 
-## 📈 Conclusiones Clave (Trade-off de Ingeniería)
+##  Conclusiones Clave (Trade-off de Ingeniería)
 
 *   **La diversidad genotípica no es negociable:** Disminuir críticamente el tamaño de la población destruye la efectividad del algoritmo, independientemente de qué tanto se incremente la mutación.
 *   **Análisis de Compromiso (Precision vs. Cost):** El *Experimento 6* ofrece la máxima precisión teórica, mientras que el *Experimento 3* presenta la mejor eficiencia temporal para entornos de producción ágiles.
