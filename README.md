@@ -30,6 +30,30 @@ Se diseñaron y ejecutaron de manera sistemática diferentes configuraciones var
 7.  **Experimento 6 (Configuración Masiva):** Máximo esfuerzo computacional ($N=150, G=200$). Consiguió precisión matemática absoluta ($2.10 \times 10^{-10}$).
 
 ---
+## Resumen: Optimización con Algoritmos Genéticos
+
+### Objetivo del Estudio
+Encontrar los parámetros óptimos del algoritmo genético simple que minimicen la función cuadrática $f(x, y) = (x-3)^2 + (y+2)^2$, cuyo mínimo teórico se sitúa en $(3, -2)$ con un fitness de $0.0$.
+
+###  Matriz Comparativa de Desempeño
+
+| Experimento | Población | Generaciones | Tasa Mutación | Tasa Cruce | Calidad del Fitness | Tiempo (s) | Diagnóstico Estratégico |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
+| **Línea Base** | 40 | 60 | 0.10 | 0.70 | Buena ($9.19 \times 10^{-5}$) | ~0.030 | Punto de partida balanceado. |
+| **Exp. 1 (Alta Población)** | 100 | 30 | 0.10 | 0.70 | Excelente ($4.57 \times 10^{-5}$) | ~0.031 | Excelente relación precisión/tiempo al priorizar diversidad inicial. |
+| **Exp. 2 (Alta Presión)** | 20 | 150 | 0.05 | 0.80 | Deficiente ($0.0192$) | ~0.036 | Convergencia prematura por baja población y baja mutación. |
+| **Exp. 3 (Alta Mutación)** | 40 | 60 | 0.35 | 0.60 | Sobresaliente ($2.43 \times 10^{-5}$) | ~0.089 | Mayor tiempo de exploración, pero alta efectividad saltando óptimos locales. |
+| **Exp. 4 (Bajo Tamaño)** | 10 | 80 | 0.40 | 0.50 | Moderada ($0.0117$) | ~0.019 | Muy rápido, pero la mutación alta no suple la falta drástica de población. |
+| **Exp. 5 (Alta Recombinación)** | 50 | 70 | 0.08 | 0.95 | Muy Buena ($6.70 \times 10^{-4}$) | ~0.035 | Intercambio genético eficiente que aceleró la aproximación. |
+| **Exp. 6 (Masivo)** | 150 | 200 | 0.15 | 0.70 | **Perfecta** ($2.10 \times 10^{-10}$) | ~0.251 | Precisión matemática absoluta a costa del mayor costo temporal. |
+
+### Conclusiones Clave para la Socialización
+
+1. **La Paradoja de los Parámetros Extremas (Población vs. Mutación):** Una población pequeña (como en el Exp. 4) no puede salvarse simplemente aumentando la mutación; se requiere un tamaño crítico para mantener la riqueza en el pool de genes.
+2. **El Compromiso Precisión-Tiempo (Trade-off):** El **Experimento 6** obtuvo precisión casi exacta ($0.0$), pero a un costo de tiempo de 8 veces el de la **Línea Base**. Para sistemas de tiempo real, el **Experimento 3** o el **Experimento 1** ofrecen la mejor relación eficiencia/precisión.
+3. **Recomendación Operativa:** Para optimización de funciones continuas, se recomienda mantener poblaciones moderadas (40-60) y elevar la mutación por encima del 20% para asegurar el escape de mesetas y mínimos locales sin degradar los tiempos de cómputo.
+
+---
 ## 13. Conclusión para la Socialización (Presentación de 2 Minutos)
 
 > 💡 **Nota del Equipo (Sala 2):** Esta sección consolida el análisis crítico de los 6 experimentos sistemáticos para responder a los interrogantes del CADI de manera ejecutiva y profesional.
